@@ -1,7 +1,13 @@
 package org.lipn.clustering.batchStream
 
 import breeze.linalg.{Vector, squaredDistance}
-
+    /**
+	  * Copyright: please refer to the README.md file
+	  * User: ghesmoune
+	  * Date: 01/01/2016
+	  * Project : Square Predict (http://square-predict.net/)
+	  * */
+	  
 class pointObj(
     val pointPartNum: Vector[Double],//the numeric part of the data-point
     val label: Int, //the real (provided) label (it is not used in the learning but for visualization and measuring performance criteria)
