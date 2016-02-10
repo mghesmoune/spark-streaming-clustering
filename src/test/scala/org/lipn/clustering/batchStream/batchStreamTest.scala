@@ -1,8 +1,9 @@
 package org.lipn.clustering.batchStream
 	 /**
-	  * Copyright: LIPN, université Paris 13
-	  * Projet : Square Predict
-	  * << le code est confidentiel et aucun partage n'est autorisé...>> 
+	  * Copyright: please refer to the README.md file
+	  * User: ghesmoune
+	  * Date: 01/01/2016
+	  * Project : Square Predict (http://square-predict.net/)
 	  * */ 
 import org.junit.Test
 
