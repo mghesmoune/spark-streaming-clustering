@@ -1,7 +1,7 @@
 # spark-streaming-clustering
 Some Spark Streaming implementations of data stream clustering algorithms.
 
-If you need farther support to run the program, feel free to contact me: mghesmouneATgmail.com (especially, I wrote some scripts to simulate a dataset as a streaming data).
+If you need support to run the program, feel free to contact me: mghesmouneATgmail.com (especially, I wrote some scripts to simulate a dataset as a streaming data).
 
   - The word code refers to the batchStream codes.
 
