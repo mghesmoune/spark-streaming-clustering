@@ -1,6 +1,8 @@
 # spark-streaming-clustering
 Some Spark Streaming implementations of data stream clustering algorithms.
 
+If you need farther support for executing the program, feel free to contact me: mghesmouneATgmail.com (especially, I wrote some scripts to simulate a dataset as a streaming data).
+
   - The word code refers to the batchStream codes.
 
   - The word AUTHORS stand for LIPN (Le Laboratoire d'Informatique de Paris-Nord (LIPN) (UMR 7030)) 
