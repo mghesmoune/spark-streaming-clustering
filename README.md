@@ -13,7 +13,7 @@ Some Spark Streaming implementations of data stream clustering algorithms.
 
     1- Mohammed Ghesmoune, Mustapha Lebbah, Hanene Azzag: Micro-Batching Growing Neural Gas for Clustering Data Streams Using Spark Streaming. INNS Conference on Big Data 2015: 158-166.
 
-    2- Mohammed Ghesmoune, Mustapha Lebbah, Hanene Azzag, Tarn Duong: Streaming Data Clustering using Spark Streaming: Application to Big-Data of Insurance. KDD 2016 (Paper under submission).
+    2- Mohammed Ghesmoune, Mustapha Lebbah, Hanene Azzag, Tarn Duong: Streaming Data Clustering using Spark Streaming: Application to Big-Data of Insurance. KDD 2016 (** Paper under submission **).
 
   - The code is a research product and is provided without any expressed or implied warranty. 
   There is no warranty of any kind concerning the fitness of this software for any particular purpose. 
