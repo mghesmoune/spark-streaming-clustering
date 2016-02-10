@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>                      
+<artifactId>batchStream</artifactId>
+<groupId>org.lipn.clustering</groupId>
+<packaging>jar</packaging>
+
+<parent>
+	<groupId>scub-foundation-for-hadoop.superpom</groupId>
+	<artifactId>scub-foundation-for-hadoop-superpom-spark-scala</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<relativePath>../../superpom/scub-foundation-for-hadoop-superpom-spark-scala</relativePath>
+</parent>
+
+<version>0.0.1-SNAPSHOT</version>
+
+<build>
+		<plugins>
+			<plugin>
+  				<groupId>scub-foundation-for-hadoop.plugin</groupId>
+  				<artifactId>scub-foundation-for-hadoop-plugin-deploy</artifactId>
+				<configuration>
+					<type>spark</type>
+					<mainClass>org.lipn.clustering.gstream.batchStreamRun<!--Job's main class --></mainClass>
+					<args>
+						<param>yarn-client</param>
+						<param>/user/share/jobs-data/lorem-ipsum.txt</param>
+						<param>/user/share/jobs-result/${project.artifactId}</param>
+						<param>DS1-200</param>
+						<param>,</param>
+						<param>0.9</param>
+						<param>1.2</param>
+						<param>3</param>
+					</args>
+					<sshHost>10.32.2.153</sshHost>
+					<sshUser>sffh</sshUser>
+					<hdfsJobPath>/user/share/jobs</hdfsJobPath>
+					<hdfsLocalDataDist>conf/test/resources</hdfsLocalDataDist>
+					<hdfsLocalData>conf/test/resources</hdfsLocalData>
+					<hdfsDataPath>/user/share/jobs-data</hdfsDataPath>
+					<hdfsResultPath>/user/share/jobs-result/${project.artifactId}</hdfsResultPath>	
+				</configuration>
+			</plugin>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-deploy-plugin</artifactId>
+			  <configuration>
+			    <skip>true</skip>
+	  			</configuration>
+			</plugin>
+			<plugin>
+    			<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+    			<executions>
+      				<execution>
+        				<phase>package</phase>
+        				<goals>
+          					<goal>shade</goal>
+        				</goals>
+      				</execution>
+    			</executions>		
+				<configuration>
+					<archive>
+					<manifestEntries>
+                        <Artifact-Id>batchStream</Artifact-Id>
+                        <Artifact-Packaging>${packaging}</Artifact-Packaging>
+                        <Artifact-Version>0.0.1-SNAPSHOT</Artifact-Version>
+                    </manifestEntries>
+					</archive>
+                	<finalName>batchStream-0.0.1-SNAPSHOT</finalName>
+            	</configuration>
+  			</plugin>
+		</plugins>
+</build>
+
+</project>
